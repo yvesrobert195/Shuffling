@@ -1,0 +1,1233 @@
+% ################################################################################### //// ######## //// ####### 
+% ##################### Axial surfaces ############################################## //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+surf systembottom      pz -100.00      % Bottom level of the modeled system                   
+surf lowershield       pz 0.00000      % Bottom of lower shield                               
+surf fuelaxial1        pz 5.0000      % Bottom of fueled region    - top of lower gas plenum     
+surf fuelaxial2        pz 38.333      % Top of fuel axial level 1/9
+surf fuelaxial3        pz 71.667      % Top of fuel axial level 2/9
+surf fuelaxial4        pz 105.000      % Top of fuel axial level 3/9
+surf fuelaxial5        pz 138.333      % Top of fuel axial level 4/9
+surf fuelaxial6        pz 171.667      % Top of fuel axial level 5/9
+surf fuelaxial7        pz 205.000      % Top of fuel axial level 6/9
+surf fuelaxial8        pz 238.333      % Top of fuel axial level 7/9
+surf fuelaxial9        pz 271.667      % Top of fuel axial level 8/9
+surf fuelaxial10        pz 305.000      % Top of fuel axial level 9/9
+surf upperreflector    pz 315.000      % Bottom of upper reflector - top of the upper gas plenum 
+surf systemtop         pz 415.000      % Top of the modeled system  
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Radial surfaces ############################################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+ 
+surf radialsystem      cyl 0.0 0.0 284.506       % Radial total system 
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### surfaces for assembly universes ############################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// #######
+
+surf assembly hexxc 0.0 0.0 50.0
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Lower axial cells ########################################### //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+cell belowcorecoolantcell 0 belowcorecoolantmat -radialsystem systembottom -lowershield 
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Core cells for filling lattices ############################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+% --- assembly cells
+cell Batch1Axial1 0101 Batch1Axial1 -assembly  % Batch: 1/7, Axial: 1/9
+cell Batch1Axial2 0201 Batch1Axial2 -assembly  % Batch: 1/7, Axial: 2/9
+cell Batch1Axial3 0301 Batch1Axial3 -assembly  % Batch: 1/7, Axial: 3/9
+cell Batch1Axial4 0401 Batch1Axial4 -assembly  % Batch: 1/7, Axial: 4/9
+cell Batch1Axial5 0501 Batch1Axial5 -assembly  % Batch: 1/7, Axial: 5/9
+cell Batch1Axial6 0601 Batch1Axial6 -assembly  % Batch: 1/7, Axial: 6/9
+cell Batch1Axial7 0701 Batch1Axial7 -assembly  % Batch: 1/7, Axial: 7/9
+cell Batch1Axial8 0801 Batch1Axial8 -assembly  % Batch: 1/7, Axial: 8/9
+cell Batch1Axial9 0901 Batch1Axial9 -assembly  % Batch: 1/7, Axial: 9/9
+
+cell Batch2Axial1 0102 Batch2Axial1 -assembly  % Batch: 2/7, Axial: 1/9
+cell Batch2Axial2 0202 Batch2Axial2 -assembly  % Batch: 2/7, Axial: 2/9
+cell Batch2Axial3 0302 Batch2Axial3 -assembly  % Batch: 2/7, Axial: 3/9
+cell Batch2Axial4 0402 Batch2Axial4 -assembly  % Batch: 2/7, Axial: 4/9
+cell Batch2Axial5 0502 Batch2Axial5 -assembly  % Batch: 2/7, Axial: 5/9
+cell Batch2Axial6 0602 Batch2Axial6 -assembly  % Batch: 2/7, Axial: 6/9
+cell Batch2Axial7 0702 Batch2Axial7 -assembly  % Batch: 2/7, Axial: 7/9
+cell Batch2Axial8 0802 Batch2Axial8 -assembly  % Batch: 2/7, Axial: 8/9
+cell Batch2Axial9 0902 Batch2Axial9 -assembly  % Batch: 2/7, Axial: 9/9
+
+cell Batch3Axial1 0103 Batch3Axial1 -assembly  % Batch: 3/7, Axial: 1/9
+cell Batch3Axial2 0203 Batch3Axial2 -assembly  % Batch: 3/7, Axial: 2/9
+cell Batch3Axial3 0303 Batch3Axial3 -assembly  % Batch: 3/7, Axial: 3/9
+cell Batch3Axial4 0403 Batch3Axial4 -assembly  % Batch: 3/7, Axial: 4/9
+cell Batch3Axial5 0503 Batch3Axial5 -assembly  % Batch: 3/7, Axial: 5/9
+cell Batch3Axial6 0603 Batch3Axial6 -assembly  % Batch: 3/7, Axial: 6/9
+cell Batch3Axial7 0703 Batch3Axial7 -assembly  % Batch: 3/7, Axial: 7/9
+cell Batch3Axial8 0803 Batch3Axial8 -assembly  % Batch: 3/7, Axial: 8/9
+cell Batch3Axial9 0903 Batch3Axial9 -assembly  % Batch: 3/7, Axial: 9/9
+
+cell Batch4Axial1 0104 Batch4Axial1 -assembly  % Batch: 4/7, Axial: 1/9
+cell Batch4Axial2 0204 Batch4Axial2 -assembly  % Batch: 4/7, Axial: 2/9
+cell Batch4Axial3 0304 Batch4Axial3 -assembly  % Batch: 4/7, Axial: 3/9
+cell Batch4Axial4 0404 Batch4Axial4 -assembly  % Batch: 4/7, Axial: 4/9
+cell Batch4Axial5 0504 Batch4Axial5 -assembly  % Batch: 4/7, Axial: 5/9
+cell Batch4Axial6 0604 Batch4Axial6 -assembly  % Batch: 4/7, Axial: 6/9
+cell Batch4Axial7 0704 Batch4Axial7 -assembly  % Batch: 4/7, Axial: 7/9
+cell Batch4Axial8 0804 Batch4Axial8 -assembly  % Batch: 4/7, Axial: 8/9
+cell Batch4Axial9 0904 Batch4Axial9 -assembly  % Batch: 4/7, Axial: 9/9
+
+cell Batch5Axial1 0105 Batch5Axial1 -assembly  % Batch: 5/7, Axial: 1/9
+cell Batch5Axial2 0205 Batch5Axial2 -assembly  % Batch: 5/7, Axial: 2/9
+cell Batch5Axial3 0305 Batch5Axial3 -assembly  % Batch: 5/7, Axial: 3/9
+cell Batch5Axial4 0405 Batch5Axial4 -assembly  % Batch: 5/7, Axial: 4/9
+cell Batch5Axial5 0505 Batch5Axial5 -assembly  % Batch: 5/7, Axial: 5/9
+cell Batch5Axial6 0605 Batch5Axial6 -assembly  % Batch: 5/7, Axial: 6/9
+cell Batch5Axial7 0705 Batch5Axial7 -assembly  % Batch: 5/7, Axial: 7/9
+cell Batch5Axial8 0805 Batch5Axial8 -assembly  % Batch: 5/7, Axial: 8/9
+cell Batch5Axial9 0905 Batch5Axial9 -assembly  % Batch: 5/7, Axial: 9/9
+
+cell Batch6Axial1 0106 Batch6Axial1 -assembly  % Batch: 6/7, Axial: 1/9
+cell Batch6Axial2 0206 Batch6Axial2 -assembly  % Batch: 6/7, Axial: 2/9
+cell Batch6Axial3 0306 Batch6Axial3 -assembly  % Batch: 6/7, Axial: 3/9
+cell Batch6Axial4 0406 Batch6Axial4 -assembly  % Batch: 6/7, Axial: 4/9
+cell Batch6Axial5 0506 Batch6Axial5 -assembly  % Batch: 6/7, Axial: 5/9
+cell Batch6Axial6 0606 Batch6Axial6 -assembly  % Batch: 6/7, Axial: 6/9
+cell Batch6Axial7 0706 Batch6Axial7 -assembly  % Batch: 6/7, Axial: 7/9
+cell Batch6Axial8 0806 Batch6Axial8 -assembly  % Batch: 6/7, Axial: 8/9
+cell Batch6Axial9 0906 Batch6Axial9 -assembly  % Batch: 6/7, Axial: 9/9
+
+cell Batch7Axial1 0107 Batch7Axial1 -assembly  % Batch: 7/7, Axial: 1/9
+cell Batch7Axial2 0207 Batch7Axial2 -assembly  % Batch: 7/7, Axial: 2/9
+cell Batch7Axial3 0307 Batch7Axial3 -assembly  % Batch: 7/7, Axial: 3/9
+cell Batch7Axial4 0407 Batch7Axial4 -assembly  % Batch: 7/7, Axial: 4/9
+cell Batch7Axial5 0507 Batch7Axial5 -assembly  % Batch: 7/7, Axial: 5/9
+cell Batch7Axial6 0607 Batch7Axial6 -assembly  % Batch: 7/7, Axial: 6/9
+cell Batch7Axial7 0707 Batch7Axial7 -assembly  % Batch: 7/7, Axial: 7/9
+cell Batch7Axial8 0807 Batch7Axial8 -assembly  % Batch: 7/7, Axial: 8/9
+cell Batch7Axial9 0907 Batch7Axial9 -assembly  % Batch: 7/7, Axial: 9/9
+
+% --- 'outside' assembly cells
+cell Batch1Axial1outside 0101 outside assembly  % Batch: 1/7, Axial: 1/9
+cell Batch1Axial2outside 0201 outside assembly  % Batch: 1/7, Axial: 2/9
+cell Batch1Axial3outside 0301 outside assembly  % Batch: 1/7, Axial: 3/9
+cell Batch1Axial4outside 0401 outside assembly  % Batch: 1/7, Axial: 4/9
+cell Batch1Axial5outside 0501 outside assembly  % Batch: 1/7, Axial: 5/9
+cell Batch1Axial6outside 0601 outside assembly  % Batch: 1/7, Axial: 6/9
+cell Batch1Axial7outside 0701 outside assembly  % Batch: 1/7, Axial: 7/9
+cell Batch1Axial8outside 0801 outside assembly  % Batch: 1/7, Axial: 8/9
+cell Batch1Axial9outside 0901 outside assembly  % Batch: 1/7, Axial: 9/9
+
+cell Batch2Axial1outside 0102 outside assembly  % Batch: 2/7, Axial: 1/9
+cell Batch2Axial2outside 0202 outside assembly  % Batch: 2/7, Axial: 2/9
+cell Batch2Axial3outside 0302 outside assembly  % Batch: 2/7, Axial: 3/9
+cell Batch2Axial4outside 0402 outside assembly  % Batch: 2/7, Axial: 4/9
+cell Batch2Axial5outside 0502 outside assembly  % Batch: 2/7, Axial: 5/9
+cell Batch2Axial6outside 0602 outside assembly  % Batch: 2/7, Axial: 6/9
+cell Batch2Axial7outside 0702 outside assembly  % Batch: 2/7, Axial: 7/9
+cell Batch2Axial8outside 0802 outside assembly  % Batch: 2/7, Axial: 8/9
+cell Batch2Axial9outside 0902 outside assembly  % Batch: 2/7, Axial: 9/9
+
+cell Batch3Axial1outside 0103 outside assembly  % Batch: 3/7, Axial: 1/9
+cell Batch3Axial2outside 0203 outside assembly  % Batch: 3/7, Axial: 2/9
+cell Batch3Axial3outside 0303 outside assembly  % Batch: 3/7, Axial: 3/9
+cell Batch3Axial4outside 0403 outside assembly  % Batch: 3/7, Axial: 4/9
+cell Batch3Axial5outside 0503 outside assembly  % Batch: 3/7, Axial: 5/9
+cell Batch3Axial6outside 0603 outside assembly  % Batch: 3/7, Axial: 6/9
+cell Batch3Axial7outside 0703 outside assembly  % Batch: 3/7, Axial: 7/9
+cell Batch3Axial8outside 0803 outside assembly  % Batch: 3/7, Axial: 8/9
+cell Batch3Axial9outside 0903 outside assembly  % Batch: 3/7, Axial: 9/9
+
+cell Batch4Axial1outside 0104 outside assembly  % Batch: 4/7, Axial: 1/9
+cell Batch4Axial2outside 0204 outside assembly  % Batch: 4/7, Axial: 2/9
+cell Batch4Axial3outside 0304 outside assembly  % Batch: 4/7, Axial: 3/9
+cell Batch4Axial4outside 0404 outside assembly  % Batch: 4/7, Axial: 4/9
+cell Batch4Axial5outside 0504 outside assembly  % Batch: 4/7, Axial: 5/9
+cell Batch4Axial6outside 0604 outside assembly  % Batch: 4/7, Axial: 6/9
+cell Batch4Axial7outside 0704 outside assembly  % Batch: 4/7, Axial: 7/9
+cell Batch4Axial8outside 0804 outside assembly  % Batch: 4/7, Axial: 8/9
+cell Batch4Axial9outside 0904 outside assembly  % Batch: 4/7, Axial: 9/9
+
+cell Batch5Axial1outside 0105 outside assembly  % Batch: 5/7, Axial: 1/9
+cell Batch5Axial2outside 0205 outside assembly  % Batch: 5/7, Axial: 2/9
+cell Batch5Axial3outside 0305 outside assembly  % Batch: 5/7, Axial: 3/9
+cell Batch5Axial4outside 0405 outside assembly  % Batch: 5/7, Axial: 4/9
+cell Batch5Axial5outside 0505 outside assembly  % Batch: 5/7, Axial: 5/9
+cell Batch5Axial6outside 0605 outside assembly  % Batch: 5/7, Axial: 6/9
+cell Batch5Axial7outside 0705 outside assembly  % Batch: 5/7, Axial: 7/9
+cell Batch5Axial8outside 0805 outside assembly  % Batch: 5/7, Axial: 8/9
+cell Batch5Axial9outside 0905 outside assembly  % Batch: 5/7, Axial: 9/9
+
+cell Batch6Axial1outside 0106 outside assembly  % Batch: 6/7, Axial: 1/9
+cell Batch6Axial2outside 0206 outside assembly  % Batch: 6/7, Axial: 2/9
+cell Batch6Axial3outside 0306 outside assembly  % Batch: 6/7, Axial: 3/9
+cell Batch6Axial4outside 0406 outside assembly  % Batch: 6/7, Axial: 4/9
+cell Batch6Axial5outside 0506 outside assembly  % Batch: 6/7, Axial: 5/9
+cell Batch6Axial6outside 0606 outside assembly  % Batch: 6/7, Axial: 6/9
+cell Batch6Axial7outside 0706 outside assembly  % Batch: 6/7, Axial: 7/9
+cell Batch6Axial8outside 0806 outside assembly  % Batch: 6/7, Axial: 8/9
+cell Batch6Axial9outside 0906 outside assembly  % Batch: 6/7, Axial: 9/9
+
+cell Batch7Axial1outside 0107 outside assembly  % Batch: 7/7, Axial: 1/9
+cell Batch7Axial2outside 0207 outside assembly  % Batch: 7/7, Axial: 2/9
+cell Batch7Axial3outside 0307 outside assembly  % Batch: 7/7, Axial: 3/9
+cell Batch7Axial4outside 0407 outside assembly  % Batch: 7/7, Axial: 4/9
+cell Batch7Axial5outside 0507 outside assembly  % Batch: 7/7, Axial: 5/9
+cell Batch7Axial6outside 0607 outside assembly  % Batch: 7/7, Axial: 6/9
+cell Batch7Axial7outside 0707 outside assembly  % Batch: 7/7, Axial: 7/9
+cell Batch7Axial8outside 0807 outside assembly  % Batch: 7/7, Axial: 8/9
+cell Batch7Axial9outside 0907 outside assembly  % Batch: 7/7, Axial: 9/9
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### non-fuel radial cells for filling lattices################### //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+% --- radial reflector assembly
+cell radialreflectorcell0 0077 belowcoreradialreflectormat -assembly
+cell radialreflectorcell1 0177 radialreflectormat0 -assembly
+cell radialreflectorcell2 0277 radialreflectormat1 -assembly
+cell radialreflectorcell3 0377 radialreflectormat2 -assembly
+cell radialreflectorcell4 0477 radialreflectormat3 -assembly
+cell radialreflectorcell5 0577 radialreflectormat4 -assembly
+cell radialreflectorcell6 0677 radialreflectormat5 -assembly
+cell radialreflectorcell7 0777 radialreflectormat6 -assembly
+cell radialreflectorcell8 0877 radialreflectormat7 -assembly
+cell radialreflectorcell9 0977 radialreflectormat8 -assembly
+cell radialreflectorcell10 1077 abovecoreradialreflectormat -assembly
+
+cell radialreflectorcell0outside 0077 outside assembly
+cell radialreflectorcell1outside 0177 outside assembly
+cell radialreflectorcell2outside 0277 outside assembly
+cell radialreflectorcell3outside 0377 outside assembly
+cell radialreflectorcell4outside 0477 outside assembly
+cell radialreflectorcell5outside 0577 outside assembly
+cell radialreflectorcell6outside 0677 outside assembly
+cell radialreflectorcell7outside 0777 outside assembly
+cell radialreflectorcell8outside 0877 outside assembly
+cell radialreflectorcell9outside 0977 outside assembly
+cell radialreflectorcell10outside 1077 outside assembly
+
+% --- radial shield assembly
+cell radialshieldcell0 0088 belowcoreradialshieldmat -assembly
+cell radialshieldcell1 0188 radialshieldmat0 -assembly
+cell radialshieldcell2 0288 radialshieldmat1 -assembly
+cell radialshieldcell3 0388 radialshieldmat2 -assembly
+cell radialshieldcell4 0488 radialshieldmat3 -assembly
+cell radialshieldcell5 0588 radialshieldmat4 -assembly
+cell radialshieldcell6 0688 radialshieldmat5 -assembly
+cell radialshieldcell7 0788 radialshieldmat6 -assembly
+cell radialshieldcell8 0888 radialshieldmat7 -assembly
+cell radialshieldcell9 0988 radialshieldmat8 -assembly
+cell radialshieldcell10 1088 abovecoreradialshieldmat -assembly
+
+cell radialshieldcell0outside 0088 outside assembly
+cell radialshieldcell1outside 0188 outside assembly
+cell radialshieldcell2outside 0288 outside assembly
+cell radialshieldcell3outside 0388 outside assembly
+cell radialshieldcell4outside 0488 outside assembly
+cell radialshieldcell5outside 0588 outside assembly
+cell radialshieldcell6outside 0688 outside assembly
+cell radialshieldcell7outside 0788 outside assembly
+cell radialshieldcell8outside 0888 outside assembly
+cell radialshieldcell9outside 0988 outside assembly
+cell radialshieldcell10outside 1088 outside assembly
+
+% --- sodium 'assembly'
+cell extrasodiumcell0 0066 outsidecoolantmat -assembly
+cell extrasodiumcell1 0166 outsidecoolantmat -assembly
+cell extrasodiumcell2 0266 outsidecoolantmat -assembly
+cell extrasodiumcell3 0366 outsidecoolantmat -assembly
+cell extrasodiumcell4 0466 outsidecoolantmat -assembly
+cell extrasodiumcell5 0566 outsidecoolantmat -assembly
+cell extrasodiumcell6 0666 outsidecoolantmat -assembly
+cell extrasodiumcell7 0766 outsidecoolantmat -assembly
+cell extrasodiumcell8 0866 outsidecoolantmat -assembly
+cell extrasodiumcell9 0966 outsidecoolantmat -assembly
+cell extrasodiumcell10 1066 outsidecoolantmat -assembly
+
+cell extrasodiumcell0outside 0066 outside assembly
+cell extrasodiumcell1outside 0166 outside assembly
+cell extrasodiumcell2outside 0266 outside assembly
+cell extrasodiumcell3outside 0366 outside assembly
+cell extrasodiumcell4outside 0466 outside assembly
+cell extrasodiumcell5outside 0566 outside assembly
+cell extrasodiumcell6outside 0666 outside assembly
+cell extrasodiumcell7outside 0766 outside assembly
+cell extrasodiumcell8outside 0866 outside assembly
+cell extrasodiumcell9outside 0966 outside assembly
+cell extrasodiumcell10outside 1066 outside assembly
+
+% --- gas plenum 'assembly'
+cell gasplenumcell 1055 uppergasplenummat -assembly
+
+cell gasplenumcelloutside 1055 outside assembly
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Core cells from filled lattices ############################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// #######
+
+cell belowcoreAxial0 0 fill 99 lowershield -fuelaxial1 -radialsystem
+
+cell coreAxial1 0 fill 1 fuelaxial1 -fuelaxial2 -radialsystem
+cell coreAxial2 0 fill 2 fuelaxial2 -fuelaxial3 -radialsystem
+cell coreAxial3 0 fill 3 fuelaxial3 -fuelaxial4 -radialsystem
+cell coreAxial4 0 fill 4 fuelaxial4 -fuelaxial5 -radialsystem
+cell coreAxial5 0 fill 5 fuelaxial5 -fuelaxial6 -radialsystem
+cell coreAxial6 0 fill 6 fuelaxial6 -fuelaxial7 -radialsystem
+cell coreAxial7 0 fill 7 fuelaxial7 -fuelaxial8 -radialsystem
+cell coreAxial8 0 fill 8 fuelaxial8 -fuelaxial9 -radialsystem
+cell coreAxial9 0 fill 9 fuelaxial9 -fuelaxial10 -radialsystem
+
+cell plenumAxial10 0 fill 10 fuelaxial10 -upperreflector -radialsystem
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Upper cells ################################################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+cell abovecorecoolantcell 0 abovecorecoolantmat -radialsystem upperreflector -systemtop 
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Outside cells ############################################### //// ######## //// ####### 
+% ################################################################################### //// ######## //// ####### 
+
+cell outdowninner 0 outside -systembottom  -radialsystem              
+cell outdownouter 0 outside -systembottom   radialsystem              
+cell outupinner   0 outside  systemtop     -radialsystem              
+cell outupouter   0 outside  systemtop      radialsystem              
+cell outxradial   0 outside  systembottom  -systemtop    radialsystem 
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### lattices #################################################### //// ######## //// ####### 
+% ################################################################################### //// ######## //// #######
+
+%%%%%
+%axial0, below core shield
+%%%%%
+
+lat 99 2 0 0 35 35 19.10
+
+0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+
+    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+    
+        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+        
+            0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+            
+                0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                
+                    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                    
+                        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                
+                            0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0088    0088    0088    0088    0088    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                    
+                                0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0088    0077    0077    0077    0077    0077    0077    0088    0088    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                            
+                                    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0077    0088    0088    0088    0088    0088    0077    0077    0088    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                        
+                                        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0077    0077    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                
+                                            0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                        
+                                                0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                        
+                                                    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                            0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                                0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                                    0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                                        0066    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                                            0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                    
+                                                                                0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                
+                                                                                    0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                                
+                                                                                        0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                        
+                                                                                            0066    0066    0066    0066    0066    0066    0066    0088    0077    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0088    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                                
+                                                                                                0066    0066    0066    0066    0066    0066    0066    0088    0077    0077    0088    0088    0088    0088    0088    0088    0088    0088    0077    0077    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                                        
+                                                                                                    0066    0066    0066    0066    0066    0066    0066    0088    0088    0077    0077    0077    0088    0088    0088    0088    0077    0077    0088    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                            
+                                                                                                        0066    0066    0066    0066    0066    0066    0066    0066    0088    0088    0088    0077    0077    0077    0077    0077    0088    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                    
+                                                                                                            0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0088    0088    0088    0088    0088    0088    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                                                                                    
+                                                                                                                0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                
+                                                                                                                    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                        
+                                                                                                                        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                        
+                                                                                                                            0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                        
+                                                                                                                                0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                        
+                                                                                                                                    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+                        
+                                                                                                                                        0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066    0066
+
+
+%%%%%
+%axial1
+%%%%%
+
+lat 1 2 0 0 35 35 19.10
+
+0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+            0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+                0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+                    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+                        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                            0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0188    0188    0188    0188    0188    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                    
+                                0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0188    0177    0177    0177    0177    0177    0177    0188    0188    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                            
+                                    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0177    0107    0107    0106    0107    0107    0177    0177    0188    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                        
+                                        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0188    0177    0107    0106    0106    0105    0105    0106    0106    0107    0177    0177    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                
+                                            0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0177    0106    0105    0105    0104    0104    0104    0105    0105    0106    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                        
+                                                0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0106    0105    0104    0103    0103    0103    0103    0104    0104    0106    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                
+                                                    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0106    0105    0104    0103    0103    0102    0102    0102    0103    0103    0104    0105    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0105    0104    0103    0102    0102    0101    0101    0102    0102    0103    0104    0105    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                            0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0106    0104    0103    0102    0102    0101    0101    0101    0102    0102    0103    0104    0106    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                                0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0106    0104    0103    0102    0101    0101    0101    0101    0101    0101    0102    0103    0105    0106    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                                    0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0105    0104    0103    0102    0101    0101    0101    0101    0101    0102    0103    0104    0105    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                                        0166    0166    0166    0166    0166    0166    0166    0166    0188    0177    0106    0105    0103    0102    0101    0101    0101    0101    0101    0101    0102    0103    0105    0106    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                                            0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0105    0104    0103    0102    0101    0101    0101    0101    0101    0102    0103    0104    0106    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                    
+                                                                                0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0105    0104    0103    0102    0102    0102    0101    0102    0102    0103    0104    0105    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                
+                                                                                    0166    0166    0166    0166    0166    0166    0166    0188    0177    0106    0105    0104    0103    0102    0102    0102    0102    0103    0104    0104    0105    0106    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                                
+                                                                                        0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0106    0105    0104    0103    0103    0103    0103    0104    0105    0106    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                        
+                                                                                            0166    0166    0166    0166    0166    0166    0166    0188    0177    0107    0106    0105    0105    0104    0104    0104    0104    0105    0106    0107    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                                
+                                                                                                0166    0166    0166    0166    0166    0166    0166    0188    0177    0177    0107    0106    0106    0105    0105    0106    0106    0107    0177    0177    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                                        
+                                                                                                    0166    0166    0166    0166    0166    0166    0166    0188    0188    0177    0177    0177    0107    0106    0107    0107    0177    0177    0188    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                            
+                                                                                                        0166    0166    0166    0166    0166    0166    0166    0166    0188    0188    0188    0177    0177    0177    0177    0177    0188    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                    
+                                                                                                            0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0188    0188    0188    0188    0188    0188    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                                                                                    
+                                                                                                                0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                            0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                                0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                                    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+                        
+                                                                                                                                        0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166    0166
+
+%%%%%
+%axial2
+%%%%%
+
+lat 2 2 0 0 35 35 19.10
+
+0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+            0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+                0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+                    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+                        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                            0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0288    0288    0288    0288    0288    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                    
+                                0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0288    0277    0277    0277    0277    0277    0277    0288    0288    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                            
+                                    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0277    0207    0207    0206    0207    0207    0277    0277    0288    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                        
+                                        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0288    0277    0207    0206    0206    0205    0205    0206    0206    0207    0277    0277    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                
+                                            0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0277    0206    0205    0205    0204    0204    0204    0205    0205    0206    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                        
+                                                0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0206    0205    0204    0203    0203    0203    0203    0204    0204    0206    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                
+                                                    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0206    0205    0204    0203    0203    0202    0202    0202    0203    0203    0204    0205    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0205    0204    0203    0202    0202    0201    0201    0202    0202    0203    0204    0205    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                            0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0206    0204    0203    0202    0202    0201    0201    0201    0202    0202    0203    0204    0206    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                                0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0206    0204    0203    0202    0201    0201    0201    0201    0201    0201    0202    0203    0205    0206    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                                    0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0205    0204    0203    0202    0201    0201    0201    0201    0201    0202    0203    0204    0205    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                                        0266    0266    0266    0266    0266    0266    0266    0266    0288    0277    0206    0205    0203    0202    0201    0201    0201    0201    0201    0201    0202    0203    0205    0206    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                                            0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0205    0204    0203    0202    0201    0201    0201    0201    0201    0202    0203    0204    0206    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                    
+                                                                                0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0205    0204    0203    0202    0202    0202    0201    0202    0202    0203    0204    0205    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                
+                                                                                    0266    0266    0266    0266    0266    0266    0266    0288    0277    0206    0205    0204    0203    0202    0202    0202    0202    0203    0204    0204    0205    0206    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                                
+                                                                                        0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0206    0205    0204    0203    0203    0203    0203    0204    0205    0206    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                        
+                                                                                            0266    0266    0266    0266    0266    0266    0266    0288    0277    0207    0206    0205    0205    0204    0204    0204    0204    0205    0206    0207    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                                
+                                                                                                0266    0266    0266    0266    0266    0266    0266    0288    0277    0277    0207    0206    0206    0205    0205    0206    0206    0207    0277    0277    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                                        
+                                                                                                    0266    0266    0266    0266    0266    0266    0266    0288    0288    0277    0277    0277    0207    0206    0207    0207    0277    0277    0288    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                            
+                                                                                                        0266    0266    0266    0266    0266    0266    0266    0266    0288    0288    0288    0277    0277    0277    0277    0277    0288    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                    
+                                                                                                            0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0288    0288    0288    0288    0288    0288    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                                                                                    
+                                                                                                                0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                            0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                                0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                                    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+                        
+                                                                                                                                        0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266    0266
+
+%%%%%
+%axial3
+%%%%%
+
+lat 3 2 0 0 35 35 19.10
+
+0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+            0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+                0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+                    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+                        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                            0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0388    0388    0388    0388    0388    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                    
+                                0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0388    0377    0377    0377    0377    0377    0377    0388    0388    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                            
+                                    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0377    0307    0307    0306    0307    0307    0377    0377    0388    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                        
+                                        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0388    0377    0307    0306    0306    0305    0305    0306    0306    0307    0377    0377    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                
+                                            0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0377    0306    0305    0305    0304    0304    0304    0305    0305    0306    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                        
+                                                0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0306    0305    0304    0303    0303    0303    0303    0304    0304    0306    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                
+                                                    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0306    0305    0304    0303    0303    0302    0302    0302    0303    0303    0304    0305    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0305    0304    0303    0302    0302    0301    0301    0302    0302    0303    0304    0305    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                            0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0306    0304    0303    0302    0302    0301    0301    0301    0302    0302    0303    0304    0306    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                                0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0306    0304    0303    0302    0301    0301    0301    0301    0301    0301    0302    0303    0305    0306    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                                    0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0305    0304    0303    0302    0301    0301    0301    0301    0301    0302    0303    0304    0305    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                                        0366    0366    0366    0366    0366    0366    0366    0366    0388    0377    0306    0305    0303    0302    0301    0301    0301    0301    0301    0301    0302    0303    0305    0306    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                                            0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0305    0304    0303    0302    0301    0301    0301    0301    0301    0302    0303    0304    0306    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                    
+                                                                                0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0305    0304    0303    0302    0302    0302    0301    0302    0302    0303    0304    0305    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                
+                                                                                    0366    0366    0366    0366    0366    0366    0366    0388    0377    0306    0305    0304    0303    0302    0302    0302    0302    0303    0304    0304    0305    0306    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                                
+                                                                                        0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0306    0305    0304    0303    0303    0303    0303    0304    0305    0306    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                        
+                                                                                            0366    0366    0366    0366    0366    0366    0366    0388    0377    0307    0306    0305    0305    0304    0304    0304    0304    0305    0306    0307    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                                
+                                                                                                0366    0366    0366    0366    0366    0366    0366    0388    0377    0377    0307    0306    0306    0305    0305    0306    0306    0307    0377    0377    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                                        
+                                                                                                    0366    0366    0366    0366    0366    0366    0366    0388    0388    0377    0377    0377    0307    0306    0307    0307    0377    0377    0388    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                            
+                                                                                                        0366    0366    0366    0366    0366    0366    0366    0366    0388    0388    0388    0377    0377    0377    0377    0377    0388    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                    
+                                                                                                            0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0388    0388    0388    0388    0388    0388    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                                                                                    
+                                                                                                                0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                            0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                                0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                                    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+                        
+                                                                                                                                        0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366    0366
+
+%%%%%
+%axial4
+%%%%%
+
+lat 4 2 0 0 35 35 19.10
+
+0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+            0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+                0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+                    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+                        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                            0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0488    0488    0488    0488    0488    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                    
+                                0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0488    0477    0477    0477    0477    0477    0477    0488    0488    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                            
+                                    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0477    0407    0407    0406    0407    0407    0477    0477    0488    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                        
+                                        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0488    0477    0407    0406    0406    0405    0405    0406    0406    0407    0477    0477    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                
+                                            0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0477    0406    0405    0405    0404    0404    0404    0405    0405    0406    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                        
+                                                0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0406    0405    0404    0403    0403    0403    0403    0404    0404    0406    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                
+                                                    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0406    0405    0404    0403    0403    0402    0402    0402    0403    0403    0404    0405    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0405    0404    0403    0402    0402    0401    0401    0402    0402    0403    0404    0405    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                            0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0406    0404    0403    0402    0402    0401    0401    0401    0402    0402    0403    0404    0406    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                                0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0406    0404    0403    0402    0401    0401    0401    0401    0401    0401    0402    0403    0405    0406    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                                    0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0405    0404    0403    0402    0401    0401    0401    0401    0401    0402    0403    0404    0405    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                                        0466    0466    0466    0466    0466    0466    0466    0466    0488    0477    0406    0405    0403    0402    0401    0401    0401    0401    0401    0401    0402    0403    0405    0406    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                                            0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0405    0404    0403    0402    0401    0401    0401    0401    0401    0402    0403    0404    0406    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                    
+                                                                                0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0405    0404    0403    0402    0402    0402    0401    0402    0402    0403    0404    0405    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                
+                                                                                    0466    0466    0466    0466    0466    0466    0466    0488    0477    0406    0405    0404    0403    0402    0402    0402    0402    0403    0404    0404    0405    0406    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                                
+                                                                                        0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0406    0405    0404    0403    0403    0403    0403    0404    0405    0406    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                        
+                                                                                            0466    0466    0466    0466    0466    0466    0466    0488    0477    0407    0406    0405    0405    0404    0404    0404    0404    0405    0406    0407    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                                
+                                                                                                0466    0466    0466    0466    0466    0466    0466    0488    0477    0477    0407    0406    0406    0405    0405    0406    0406    0407    0477    0477    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                                        
+                                                                                                    0466    0466    0466    0466    0466    0466    0466    0488    0488    0477    0477    0477    0407    0406    0407    0407    0477    0477    0488    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                            
+                                                                                                        0466    0466    0466    0466    0466    0466    0466    0466    0488    0488    0488    0477    0477    0477    0477    0477    0488    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                    
+                                                                                                            0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0488    0488    0488    0488    0488    0488    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                                                                                    
+                                                                                                                0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                            0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                                0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                                    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+                        
+                                                                                                                                        0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466    0466
+
+%%%%%
+%axial5
+%%%%%
+
+lat 5 2 0 0 35 35 19.10
+
+0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+            0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+                0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+                    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+                        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                            0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0588    0588    0588    0588    0588    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                    
+                                0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0588    0577    0577    0577    0577    0577    0577    0588    0588    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                            
+                                    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0577    0507    0507    0506    0507    0507    0577    0577    0588    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                        
+                                        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0588    0577    0507    0506    0506    0505    0505    0506    0506    0507    0577    0577    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                
+                                            0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0577    0506    0505    0505    0504    0504    0504    0505    0505    0506    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                        
+                                                0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0506    0505    0504    0503    0503    0503    0503    0504    0504    0506    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                
+                                                    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0506    0505    0504    0503    0503    0502    0502    0502    0503    0503    0504    0505    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0505    0504    0503    0502    0502    0501    0501    0502    0502    0503    0504    0505    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                            0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0506    0504    0503    0502    0502    0501    0501    0501    0502    0502    0503    0504    0506    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                                0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0506    0504    0503    0502    0501    0501    0501    0501    0501    0501    0502    0503    0505    0506    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                                    0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0505    0504    0503    0502    0501    0501    0501    0501    0501    0502    0503    0504    0505    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                                        0566    0566    0566    0566    0566    0566    0566    0566    0588    0577    0506    0505    0503    0502    0501    0501    0501    0501    0501    0501    0502    0503    0505    0506    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                                            0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0505    0504    0503    0502    0501    0501    0501    0501    0501    0502    0503    0504    0506    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                    
+                                                                                0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0505    0504    0503    0502    0502    0502    0501    0502    0502    0503    0504    0505    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                
+                                                                                    0566    0566    0566    0566    0566    0566    0566    0588    0577    0506    0505    0504    0503    0502    0502    0502    0502    0503    0504    0504    0505    0506    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                                
+                                                                                        0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0506    0505    0504    0503    0503    0503    0503    0504    0505    0506    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                        
+                                                                                            0566    0566    0566    0566    0566    0566    0566    0588    0577    0507    0506    0505    0505    0504    0504    0504    0504    0505    0506    0507    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                                
+                                                                                                0566    0566    0566    0566    0566    0566    0566    0588    0577    0577    0507    0506    0506    0505    0505    0506    0506    0507    0577    0577    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                                        
+                                                                                                    0566    0566    0566    0566    0566    0566    0566    0588    0588    0577    0577    0577    0507    0506    0507    0507    0577    0577    0588    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                            
+                                                                                                        0566    0566    0566    0566    0566    0566    0566    0566    0588    0588    0588    0577    0577    0577    0577    0577    0588    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                    
+                                                                                                            0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0588    0588    0588    0588    0588    0588    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                                                                                    
+                                                                                                                0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                            0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                                0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                                    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+                        
+                                                                                                                                        0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566    0566
+
+%%%%%
+%axial6
+%%%%%
+
+lat 6 2 0 0 35 35 19.10
+
+0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+            0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+                0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+                    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+                        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                            0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0688    0688    0688    0688    0688    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                    
+                                0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0688    0677    0677    0677    0677    0677    0677    0688    0688    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                            
+                                    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0677    0607    0607    0606    0607    0607    0677    0677    0688    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                        
+                                        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0688    0677    0607    0606    0606    0605    0605    0606    0606    0607    0677    0677    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                
+                                            0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0677    0606    0605    0605    0604    0604    0604    0605    0605    0606    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                        
+                                                0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0606    0605    0604    0603    0603    0603    0603    0604    0604    0606    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                
+                                                    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0606    0605    0604    0603    0603    0602    0602    0602    0603    0603    0604    0605    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0605    0604    0603    0602    0602    0601    0601    0602    0602    0603    0604    0605    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                            0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0606    0604    0603    0602    0602    0601    0601    0601    0602    0602    0603    0604    0606    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                                0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0606    0604    0603    0602    0601    0601    0601    0601    0601    0601    0602    0603    0605    0606    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                                    0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0605    0604    0603    0602    0601    0601    0601    0601    0601    0602    0603    0604    0605    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                                        0666    0666    0666    0666    0666    0666    0666    0666    0688    0677    0606    0605    0603    0602    0601    0601    0601    0601    0601    0601    0602    0603    0605    0606    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                                            0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0605    0604    0603    0602    0601    0601    0601    0601    0601    0602    0603    0604    0606    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                    
+                                                                                0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0605    0604    0603    0602    0602    0602    0601    0602    0602    0603    0604    0605    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                
+                                                                                    0666    0666    0666    0666    0666    0666    0666    0688    0677    0606    0605    0604    0603    0602    0602    0602    0602    0603    0604    0604    0605    0606    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                                
+                                                                                        0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0606    0605    0604    0603    0603    0603    0603    0604    0605    0606    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                        
+                                                                                            0666    0666    0666    0666    0666    0666    0666    0688    0677    0607    0606    0605    0605    0604    0604    0604    0604    0605    0606    0607    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                                
+                                                                                                0666    0666    0666    0666    0666    0666    0666    0688    0677    0677    0607    0606    0606    0605    0605    0606    0606    0607    0677    0677    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                                        
+                                                                                                    0666    0666    0666    0666    0666    0666    0666    0688    0688    0677    0677    0677    0607    0606    0607    0607    0677    0677    0688    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                            
+                                                                                                        0666    0666    0666    0666    0666    0666    0666    0666    0688    0688    0688    0677    0677    0677    0677    0677    0688    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                    
+                                                                                                            0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0688    0688    0688    0688    0688    0688    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                                                                                    
+                                                                                                                0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                            0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                                0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                                    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+                        
+                                                                                                                                        0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666    0666
+
+%%%%%
+%axial7
+%%%%%
+
+lat 7 2 0 0 35 35 19.10                                                                                        
+
+0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+            0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+                0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+                    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+                        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                            0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0788    0788    0788    0788    0788    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                    
+                                0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0788    0777    0777    0777    0777    0777    0777    0788    0788    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                            
+                                    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0777    0707    0707    0706    0707    0707    0777    0777    0788    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                        
+                                        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0788    0777    0707    0706    0706    0705    0705    0706    0706    0707    0777    0777    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                
+                                            0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0777    0706    0705    0705    0704    0704    0704    0705    0705    0706    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                        
+                                                0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0706    0705    0704    0703    0703    0703    0703    0704    0704    0706    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                
+                                                    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0706    0705    0704    0703    0703    0702    0702    0702    0703    0703    0704    0705    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0705    0704    0703    0702    0702    0701    0701    0702    0702    0703    0704    0705    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                            0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0706    0704    0703    0702    0702    0701    0701    0701    0702    0702    0703    0704    0706    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                                0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0706    0704    0703    0702    0701    0701    0701    0701    0701    0701    0702    0703    0705    0706    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                                    0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0705    0704    0703    0702    0701    0701    0701    0701    0701    0702    0703    0704    0705    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                                        0766    0766    0766    0766    0766    0766    0766    0766    0788    0777    0706    0705    0703    0702    0701    0701    0701    0701    0701    0701    0702    0703    0705    0706    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                                            0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0705    0704    0703    0702    0701    0701    0701    0701    0701    0702    0703    0704    0706    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                    
+                                                                                0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0705    0704    0703    0702    0702    0702    0701    0702    0702    0703    0704    0705    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                
+                                                                                    0766    0766    0766    0766    0766    0766    0766    0788    0777    0706    0705    0704    0703    0702    0702    0702    0702    0703    0704    0704    0705    0706    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                                
+                                                                                        0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0706    0705    0704    0703    0703    0703    0703    0704    0705    0706    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                        
+                                                                                            0766    0766    0766    0766    0766    0766    0766    0788    0777    0707    0706    0705    0705    0704    0704    0704    0704    0705    0706    0707    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                                
+                                                                                                0766    0766    0766    0766    0766    0766    0766    0788    0777    0777    0707    0706    0706    0705    0705    0706    0706    0707    0777    0777    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                                        
+                                                                                                    0766    0766    0766    0766    0766    0766    0766    0788    0788    0777    0777    0777    0707    0706    0707    0707    0777    0777    0788    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                            
+                                                                                                        0766    0766    0766    0766    0766    0766    0766    0766    0788    0788    0788    0777    0777    0777    0777    0777    0788    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                    
+                                                                                                            0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0788    0788    0788    0788    0788    0788    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                                                                                    
+                                                                                                                0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                            0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                                0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                                    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+                        
+                                                                                                                                        0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766    0766
+
+%%%%%
+%axial8
+%%%%%
+
+lat 8 2 0 0 35 35 19.10  
+
+0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+            0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+                0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+                    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+                        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                            0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0888    0888    0888    0888    0888    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                    
+                                0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0888    0877    0877    0877    0877    0877    0877    0888    0888    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                            
+                                    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0877    0807    0807    0806    0807    0807    0877    0877    0888    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                        
+                                        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0888    0877    0807    0806    0806    0805    0805    0806    0806    0807    0877    0877    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                
+                                            0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0877    0806    0805    0805    0804    0804    0804    0805    0805    0806    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                        
+                                                0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0806    0805    0804    0803    0803    0803    0803    0804    0804    0806    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                
+                                                    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0806    0805    0804    0803    0803    0802    0802    0802    0803    0803    0804    0805    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0805    0804    0803    0802    0802    0801    0801    0802    0802    0803    0804    0805    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                            0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0806    0804    0803    0802    0802    0801    0801    0801    0802    0802    0803    0804    0806    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                                0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0806    0804    0803    0802    0801    0801    0801    0801    0801    0801    0802    0803    0805    0806    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                                    0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0805    0804    0803    0802    0801    0801    0801    0801    0801    0802    0803    0804    0805    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                                        0866    0866    0866    0866    0866    0866    0866    0866    0888    0877    0806    0805    0803    0802    0801    0801    0801    0801    0801    0801    0802    0803    0805    0806    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                                            0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0805    0804    0803    0802    0801    0801    0801    0801    0801    0802    0803    0804    0806    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                    
+                                                                                0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0805    0804    0803    0802    0802    0802    0801    0802    0802    0803    0804    0805    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                
+                                                                                    0866    0866    0866    0866    0866    0866    0866    0888    0877    0806    0805    0804    0803    0802    0802    0802    0802    0803    0804    0804    0805    0806    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                                
+                                                                                        0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0806    0805    0804    0803    0803    0803    0803    0804    0805    0806    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                        
+                                                                                            0866    0866    0866    0866    0866    0866    0866    0888    0877    0807    0806    0805    0805    0804    0804    0804    0804    0805    0806    0807    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                                
+                                                                                                0866    0866    0866    0866    0866    0866    0866    0888    0877    0877    0807    0806    0806    0805    0805    0806    0806    0807    0877    0877    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                                        
+                                                                                                    0866    0866    0866    0866    0866    0866    0866    0888    0888    0877    0877    0877    0807    0806    0807    0807    0877    0877    0888    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                            
+                                                                                                        0866    0866    0866    0866    0866    0866    0866    0866    0888    0888    0888    0877    0877    0877    0877    0877    0888    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                    
+                                                                                                            0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0888    0888    0888    0888    0888    0888    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                                                                                    
+                                                                                                                0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                            0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                                0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                                    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+                        
+                                                                                                                                        0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866    0866
+
+%%%%%
+%axial9
+%%%%%
+
+lat 9 2 0 0 35 35 19.10  
+
+0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+            0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+                0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+                    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+                        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                            0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0988    0988    0988    0988    0988    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                    
+                                0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0988    0977    0977    0977    0977    0977    0977    0988    0988    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                            
+                                    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0977    0907    0907    0906    0907    0907    0977    0977    0988    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                        
+                                        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0988    0977    0907    0906    0906    0905    0905    0906    0906    0907    0977    0977    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                
+                                            0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0977    0906    0905    0905    0904    0904    0904    0905    0905    0906    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                        
+                                                0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0906    0905    0904    0903    0903    0903    0903    0904    0904    0906    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                
+                                                    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0906    0905    0904    0903    0903    0902    0902    0902    0903    0903    0904    0905    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0905    0904    0903    0902    0902    0901    0901    0902    0902    0903    0904    0905    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                            0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0906    0904    0903    0902    0902    0901    0901    0901    0902    0902    0903    0904    0906    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                                0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0906    0904    0903    0902    0901    0901    0901    0901    0901    0901    0902    0903    0905    0906    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                                    0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0905    0904    0903    0902    0901    0901    0901    0901    0901    0902    0903    0904    0905    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                                        0966    0966    0966    0966    0966    0966    0966    0966    0988    0977    0906    0905    0903    0902    0901    0901    0901    0901    0901    0901    0902    0903    0905    0906    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                                            0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0905    0904    0903    0902    0901    0901    0901    0901    0901    0902    0903    0904    0906    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                    
+                                                                                0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0905    0904    0903    0902    0902    0902    0901    0902    0902    0903    0904    0905    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                
+                                                                                    0966    0966    0966    0966    0966    0966    0966    0988    0977    0906    0905    0904    0903    0902    0902    0902    0902    0903    0904    0904    0905    0906    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                                
+                                                                                        0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0906    0905    0904    0903    0903    0903    0903    0904    0905    0906    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                        
+                                                                                            0966    0966    0966    0966    0966    0966    0966    0988    0977    0907    0906    0905    0905    0904    0904    0904    0904    0905    0906    0907    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                                
+                                                                                                0966    0966    0966    0966    0966    0966    0966    0988    0977    0977    0907    0906    0906    0905    0905    0906    0906    0907    0977    0977    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                                        
+                                                                                                    0966    0966    0966    0966    0966    0966    0966    0988    0988    0977    0977    0977    0907    0906    0907    0907    0977    0977    0988    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                            
+                                                                                                        0966    0966    0966    0966    0966    0966    0966    0966    0988    0988    0988    0977    0977    0977    0977    0977    0988    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                    
+                                                                                                            0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0988    0988    0988    0988    0988    0988    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                                                                                    
+                                                                                                                0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                            0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                                0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                                    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+                        
+                                                                                                                                        0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966    0966
+
+%%%%%
+%axial10, plenum/reflector
+%%%%%
+
+lat 10 2 0 0 35 35 19.10
+
+1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+            1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+                1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+                    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+                        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                            1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1088    1088    1088    1088    1088    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                    
+                                1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1088    1077    1077    1077    1077    1077    1077    1088    1088    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                            
+                                    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1077    1055    1055    1055    1055    1055    1077    1077    1088    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                        
+                                        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1077    1077    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                
+                                            1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                        
+                                                1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                
+                                                    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                            1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                                1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                                    1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                                        1066    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                                            1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                    
+                                                                                1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                
+                                                                                    1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                                
+                                                                                        1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                        
+                                                                                            1066    1066    1066    1066    1066    1066    1066    1088    1077    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1055    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                                
+                                                                                                1066    1066    1066    1066    1066    1066    1066    1088    1077    1077    1055    1055    1055    1055    1055    1055    1055    1055    1077    1077    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                                        
+                                                                                                    1066    1066    1066    1066    1066    1066    1066    1088    1088    1077    1077    1077    1055    1055    1055    1055    1077    1077    1088    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                            
+                                                                                                        1066    1066    1066    1066    1066    1066    1066    1066    1088    1088    1088    1077    1077    1077    1077    1077    1088    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                    
+                                                                                                            1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1088    1088    1088    1088    1088    1088    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                                                                                    
+                                                                                                                1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                            1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                                1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                                    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+                        
+                                                                                                                                        1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066    1066
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Power distribution detector in each assembly ################ //// ######## //// ####### 
+% ################################################################################### //// ######## //// #######
+
+det AssemblyPowerAxial1 n dl 1 dr -8 void
+det AssemblyPowerAxial2 n dl 2 dr -8 void
+det AssemblyPowerAxial3 n dl 3 dr -8 void
+det AssemblyPowerAxial4 n dl 4 dr -8 void
+det AssemblyPowerAxial5 n dl 5 dr -8 void
+det AssemblyPowerAxial6 n dl 6 dr -8 void
+det AssemblyPowerAxial7 n dl 7 dr -8 void
+det AssemblyPowerAxial8 n dl 8 dr -8 void
+det AssemblyPowerAxial9 n dl 9 dr -8 void
+
+%det AssemblyGammaPowerAxial1 p dl 1 dr -12 void
+%det AssemblyGammaPowerAxial2 p dl 2 dr -12 void
+%det AssemblyGammaPowerAxial3 p dl 3 dr -12 void
+%det AssemblyGammaPowerAxial4 p dl 4 dr -12 void
+%det AssemblyGammaPowerAxial5 p dl 5 dr -12 void
+%det AssemblyGammaPowerAxial6 p dl 6 dr -12 void
+%det AssemblyGammaPowerAxial7 p dl 7 dr -12 void
+%det AssemblyGammaPowerAxial8 p dl 8 dr -12 void
+%det AssemblyGammaPowerAxial9 p dl 9 dr -12 void
+
+det Batch1Energy n dm Batch1Axial5 de spectrumGrid
+det Batch2Energy n dm Batch2Axial5 de spectrumGrid
+det Batch3Energy n dm Batch3Axial5 de spectrumGrid
+det Batch4Energy n dm Batch4Axial5 de spectrumGrid
+det Batch5Energy n dm Batch5Axial5 de spectrumGrid
+det Batch6Energy n dm Batch6Axial5 de spectrumGrid
+det Batch7Energy n dm Batch7Axial5 de spectrumGrid
+
+ene spectrumGrid 3 1000 1E-4 1E1
+
+% ################################################################################### //// ######## //// ####### 
+% ##################### Set options ################################################# //// ######## //// ####### 
+% ################################################################################### //// ######## //// #######
+
+% --- turn on coupled neutron/photon transport
+%set ngamma 2
+
+% --- include material definitions in separate file
+include "A_nonfuel"    
+include "A_mburn"
+
+% --- set data library locations
+set acelib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7u.xsdata" %"/global/scratch/ckeckler/photon.xsdata"
+set declib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.dec"
+set nfylib "/global/home/groups/co_nuclear/serpent/xsdata_2/endfb7/sss_endfb7.nfy"
+%set pdatadir "/global/home/groups/co_nuclear/serpent/photon_data"
+
+% --- set burn power
+set power 1400000000.0
+
+% --- Reduce energy grid size:
+set egrid 5E-3 1E-5 10.0
+
+% --- Cut-offs:
+set fpcut   1E-9
+set stabcut 1E-12
+set ttacut  1E-18
+set xsfcut  1E-6
+
+% --- ???
+set pcc 0
+set printm 1
+set nbuf 8
+%set rfw yes binaryRestart
+
+% --- set depletion settings
+dep daystep 556.9956984378534 556.9956984378534 556.9956984378534  
+set inventory all
+
+% --- criticality settings
+set pop 600000 520 40 1 40 40
+set his 1
+
+% --- memory optimization
+set opti 1
+
+% --- perturbation settings
+%sens resp keff 1
+%sens pert matlist all
+%sens pert zailist 110230
+%sens pert xs all
+%sens opt egrid pertgrid
+
+ene pertgrid 1 1E-10 1E3
+
+% --- print cross sections
+%set xsplot 1000 1E-3 1E1

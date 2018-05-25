@@ -1,0 +1,15 @@
+fid=fopen('model.lp');
+text = textscan(fid,'%s','delimiter','\n');
+l=text{1};
+for line=1:length(text)
+    for k=1:ncycles
+        for i=1:nass
+            replace(l{line},['x' num2str((k-1)*ncycles+i)],['D' num2str(i) num2str(k)]);
+            for j=1:nloc
+                replace(l{line},['x' num2str(nass*ncycles+(k-1)*nass*nloc+(i-1)*nloc+j)],['d' num2str(i) num2str(k)]
+            end
+        end
+    end
+end
+
+    replace
