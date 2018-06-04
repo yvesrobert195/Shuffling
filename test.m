@@ -1,4 +1,5 @@
 clear
+addpath(genpath('/global/home/users/yvesrobert/CPLEX/cplex/matlab/x86-64_linux'));
 addpath(genpath('Functions/'))
 %% test
 nloc=30;
