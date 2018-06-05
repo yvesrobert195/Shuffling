@@ -1,37 +1,40 @@
 clear
 addpath(genpath('Functions/'))
 %% test
-% nloc=4;
-% nbatch=2;
-% ncycles=nbatch;
-% nass=nloc/ncycles;
-% Fluxes=ones(1,nloc);
-% Shuf_scheme=randperm(nbatch);
-% Batches=ceil([1:nloc]./nass);
+nloc=90;
+nbatch=10;
+ncycles=nbatch;
+nass=nloc/ncycles;
+if mod(nass,1)~=0
+    error('!!!')
+end
+Fluxes=1:nloc;
+Shuf_scheme=randperm(nbatch);
+Batches=ceil([1:nloc]./nass);
 
 
 % Fluxes=randi(10,nloc,1);
 
 %% Input
-%Read Batch
-validPositions = {[1], 1:6, 1:12, 1:18, 1:24, 1:30, 1:36, 1:42, [4:7, 11:15, 20:23, 27:31, 36:39, 43:47]}; %cell containing a vector for each ring. each vector contians the position numbers which are valid in each ring for assembly placement
-pitch = 22.05; %cm
-batchRadii = [0.0, (53.065+75.045)/2, (75.045+91.911)/2, (91.911+106.129)/2, (106.129+118.656)/2, (118.656+129.981)/2, (129.981+140.396)/2];
-[~,Batches]=layoutOpt(validPositions,pitch,batchRadii);
-%Read Power
-assemblyPowerThreshold=1E4;
-Shuf_scheme=[7 6 5 1 4 2 3];
-nbatch=length(Shuf_scheme);
-Q = readQ({'A_det0'});
-lengthQ_original = length(Q);
-[Q, map] = formMap(Q, assemblyPowerThreshold);
-nloc=length(Q);
-ncycles=nbatch;
-nass=nloc/ncycles;
-Fluxes=Q/sum(Q);
-%
-% Shuf_scheme=[12 11 10 9 8 1 7 6 2 3 4 5]';
-%
+% %Read Batch
+% validPositions = {[1], 1:6, 1:12, 1:18, 1:24, 1:30, 1:36, 1:42, [4:7, 11:15, 20:23, 27:31, 36:39, 43:47]}; %cell containing a vector for each ring. each vector contians the position numbers which are valid in each ring for assembly placement
+% pitch = 22.05; %cm
+% batchRadii = [0.0, (53.065+75.045)/2, (75.045+91.911)/2, (91.911+106.129)/2, (106.129+118.656)/2, (118.656+129.981)/2, (129.981+140.396)/2];
+% [~,Batches]=layoutOpt(validPositions,pitch,batchRadii);
+% %Read Power
+% assemblyPowerThreshold=1E4;
+% Shuf_scheme=[7 6 5 1 4 2 3];
+% nbatch=length(Shuf_scheme);
+% Q = readQ({'A_det0'});
+% lengthQ_original = length(Q);
+% [Q, map] = formMap(Q, assemblyPowerThreshold);
+% nloc=length(Q);
+% ncycles=nbatch;
+% nass=nloc/ncycles;
+% Fluxes=Q/sum(Q);
+% %
+% % Shuf_scheme=[12 11 10 9 8 1 7 6 2 3 4 5]';
+% %
 
 %% Constraints
 fprintf('\tInitialization of constraint matrices\n')
@@ -39,7 +42,7 @@ fprintf('\tInitialization of constraint matrices\n')
 nvars=nass*ncycles + nass*nloc*ncycles + ncycles-1 + 1;
 %find how many constraints
 nineqs = nass*(nass-1)*(ncycles-1)+nloc*ncycles + nass*(nass-1);
-neqs = ncycles*nass + nass*ncycles + nass*ncycles ;
+neqs = ncycles*nass + nass*ncycles;% + nass*ncycles ;
 
 %initialize constraint matrices and vectors
 % nelements_Aineq = 3*nass*nass*ncycles+nass*ncycles*nloc;
@@ -128,7 +131,7 @@ constraint_idx = nass*(nass-1)*(ncycles-1)+nloc*ncycles+1;
 for i=1:nass %assembly
     for ip=1:nass
         if i~=ip
-            for k=1:ncycles-1
+            for k=1:ncycles
                 Aineq_i(idx_Aineq)=constraint_idx;
                 Aineq_j(idx_Aineq)=(k-1)*nass+i;
                 Aineq_v(idx_Aineq)=1;
@@ -162,7 +165,11 @@ for k=1:ncycles
         for j = 1:nloc
             Aeq_i(idx_Aeq) = (k-1)*nass+i;
             Aeq_j(idx_Aeq) = nass*ncycles+(k-1)*nass*nloc+(i-1)*nloc+j;
-            Aeq_v(idx_Aeq) = -Fluxes(j);
+            if Batches(j)==Shuf_scheme(k)
+                Aeq_v(idx_Aeq) = -Fluxes(j);
+            else
+                Aeq_v(idx_Aeq) =0;
+            end
             idx_Aeq = idx_Aeq+1;
         end
         beq((k-1)*nass+i) = 0;
@@ -181,20 +188,20 @@ for k=1:ncycles
     end
 end
 
-%selection
-for k=1:ncycles
-    for i=1:nass
-        for j=1:nloc
-            if Batches(j)~=Shuf_scheme(k)
-                Aeq_i(idx_Aeq) = ncycles*nass+ncycles*nass+(k-1)*nass+i;
-                Aeq_j(idx_Aeq) = nass*ncycles+(k-1)*nass*nloc+(i-1)*nloc+j;
-                Aeq_v(idx_Aeq) = 1;
-                idx_Aeq = idx_Aeq+1;
-            end
-        end
-        beq(ncycles*nass+ncycles*nass+(k-1)*nass+i) = 0;
-    end
-end
+% %selection
+% for k=1:ncycles
+%     for i=1:nass
+%         for j=1:nloc
+%             if Batches(j)~=Shuf_scheme(k)
+%                 Aeq_i(idx_Aeq) = ncycles*nass+ncycles*nass+(k-1)*nass+i;
+%                 Aeq_j(idx_Aeq) = nass*ncycles+(k-1)*nass*nloc+(i-1)*nloc+j;
+%                 Aeq_v(idx_Aeq) = 1;
+%                 idx_Aeq = idx_Aeq+1;
+%             end
+%         end
+%         beq(ncycles*nass+ncycles*nass+(k-1)*nass+i) = 0;
+%     end
+% end
 
 %% Build and solve
 fprintf('\tBuilding the constraint matrices\n');
@@ -222,12 +229,14 @@ opts=cplexoptimset('display','on'); % Option to display iterations ('iter','on',
 opts.exportmodel = 'model.lp'; % Name of the saved model
 opts.workmem = 8000; % Maximum RAM to allocate for CPLEX
 [solutionvector, objval, status, output] = cplexmilp(c', Aineq, bineq', Aeq, beq', [], [], [], [], [], ctype,[],opts);
+% [solutionvector, objval, status, output] = cplexmilp(c', [], [], Aeq, beq', [], [], [], [], [], ctype,[],opts);
+
 fprintf('exit status = % i\n', status);
 fprintf('solution time = % f\n', output.time);
 fprintf('Objective value = % i\n', objval);
 
 %% Post-process
-read_model
+%read_model
 if status==1
     for k=1:ncycles
         max_dif(k)=solutionvector(nass*ncycles+ncycles*nass*nloc+k);
